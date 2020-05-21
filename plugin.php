@@ -71,11 +71,7 @@ public function widget_scripts() {
 public function widget_styles() {
     // Bootstrap CSS
     wp_enqueue_style('lovetura-posts', plugin_dir_url(__FILE__) . 'assets/css/bootstrap.min.css', array(), '4.3.1' );
-    // VLT Plugins
-    wp_enqueue_style('lovetura-posts-vlt-plugins', plugin_dir_url(__FILE__) . 'assets/css/vlt-plugins.min.css', array(), \Elementor_LovePosts::VERSION );
-    // VLT Style
-    wp_enqueue_style('lovetura-posts-vlt-style', plugin_dir_url(__FILE__) . 'assets/css/vlt-style.min.css', array(), \Elementor_LovePosts::VERSION );
-    // Lovetura Posts Styles
+    // Lovetura Posts Custom Styles
     wp_enqueue_style('lovetura-posts-custom', plugin_dir_url(__FILE__) . 'assets/css/posts.css', array(), \Elementor_LovePosts::VERSION );
 }
 
