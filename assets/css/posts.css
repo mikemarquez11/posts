@@ -7,6 +7,33 @@ body .blog-cards__content * {
     z-index: 1;
 }
 
+.blog-cards__row:before, .blog-cards__row:after {
+    content: "";
+    display: block;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.blog-cards__row:before {
+    background-image: url(https://lovetura.com/wp-content/uploads/2020/05/lovetura-autoestima-00.svg);
+    height: 65px;
+    width: 55px;
+    bottom: -12px;
+    left: 0;
+    z-index: 2;
+}
+
+.blog-cards__row:after {
+    background-image: url(https://lovetura.com/wp-content/uploads/2020/05/lovetura-sparkle-01.svg);
+    height: 100px;
+    width: 100px;
+    right: -40px;
+    z-index: -1;
+    top: -40px;
+}
+
 .blog-cards__item {
     -moz-box-shadow: 0px 5px 1rem rgba(106,106,111,0.3); 
     -webkit-box-shadow: 0px 5px 1rem rgba(106,106,111,0.3); 

@@ -132,8 +132,7 @@ class LovePosts extends Widget_Base {
         ); ?>
         
         <div class="container">
-        <div class="row">
-
+        <div class="row col-row content-section__row blog-cards__row">
         <?php
         $items_listing = new \WP_Query($args);
         while ( $items_listing->have_posts() ) : 
