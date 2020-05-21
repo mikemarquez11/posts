@@ -101,7 +101,7 @@ class LovePosts extends Widget_Base {
             [
                 'label' => __( 'Columns', 'elementor-love-posts' ),
                 'type' => Controls_Manager::SELECT,
-                'default' => '2',
+                'default' => '3',
                 'options' => [
                     2 => __( '2', 'elementor-love-posts' ),
                     3 => __( '3', 'elementor-love-posts' ),
@@ -141,7 +141,7 @@ class LovePosts extends Widget_Base {
 
             $thumb = get_the_post_thumbnail_url(get_the_ID(), 'medium-large');
         ?>
-                <div class="col-lg-4 col-md-4 col-sm-12 col-12" style="margin-bottom: 10px;">
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12" style="margin-bottom: 15px;">
                 <article class="blog-cards__item">
                     <div class="blog-cards__img">
                     <div class="blog-post-thumbnail">
@@ -152,9 +152,9 @@ class LovePosts extends Widget_Base {
                     </div> <!-- div.blog-cards__img -->
                     <div class="blog-cards__content">
                         <div class="blog-card__headline">
-                            <h5 style="min-height: 40px;"><?php the_title(); ?></h5>
+                            <h5 style="min-height: 60px;"><?php the_title(); ?></h5>
                         </div>
-                        <div class="blog-cards__excerpt" style="min-height: 95px;">
+                        <div class="blog-cards__excerpt" style="min-height: 90px;">
                             <p><?php echo wp_trim_words(get_the_excerpt(), 12, ''); ?>...</p>
                         </div>
                             <a class="blog-cards__link" href="<?php esc_attr(the_permalink()); ?>" target="_self"><span>Aprender más</span></a>
