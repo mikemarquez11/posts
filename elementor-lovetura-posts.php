@@ -3,7 +3,7 @@
  * Plugin Name: Lovetura Elementor Posts Widget
  * Description: A widget to show Posts
  * Plugin URI: https://lovetura.com
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Lovetura
  * Author URI: https://lovetura.com
  * Text Domain: elementor-love-posts
@@ -28,7 +28,7 @@
      * @since 1.0.0
      * @var string The plugin version.
      */
-    const VERSION = '1.0.0';
+    const VERSION = '1.0.1';
 
     /**
      * Minimum Elementor Version
