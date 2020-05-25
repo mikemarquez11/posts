@@ -140,7 +140,7 @@ class LovePosts extends Widget_Base {
 
             $thumb = get_the_post_thumbnail_url(get_the_ID(), 'medium-large');
         ?>
-                <div class="col-lg-4 col-md-6 col-sm-12 col-12" style="margin-bottom: 15px;">
+                <div class="col-lg-4 col-md-6 col-sm-12 col-12" style="margin-bottom: 15px; visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.6s cubic-bezier(0.5, 0, 0, 1) 0s, transform 0.6s cubic-bezier(0.5, 0, 0, 1) 0s;">
                 <article class="blog-cards__item">
                     <div class="blog-cards__img">
                     <div class="blog-post-thumbnail">
