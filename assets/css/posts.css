@@ -18,8 +18,8 @@ body .blog-cards__content * {
 
 .blog-cards__row:before {
     background-image: url(https://lovetura.com/wp-content/uploads/2020/05/lovetura-autoestima-00.svg);
-    height: 65px;
-    width: 55px;
+    height: 60px;
+    width: 50px;
     bottom: -12px;
     left: 0;
     z-index: 2;
@@ -85,10 +85,12 @@ body .blog-cards__content * {
     color: #3F8487;
 }
 
-.blog-cards__content  a {
+.blog-cards__item .blog-cards__content  a {
     color: #3F8487;
+    text-decoration: underline;
 }
 
-.blog-cards__content .blog-cards__excerpt {
+.blog-cards__item .blog-cards__content .blog-cards__excerpt {
     margin-bottom: 1.25rem;
+    color: #6a6a6f;
 }
