@@ -64,15 +64,23 @@ function add_elementor_widget_categories( $elements_manager ) {
  * @access public
  */
 public function widget_scripts() {
-    // LovePosts JS
-    //wp_enqueue_script('lovetura-posts', plugin_dir_url(__FILE__) . 'assets/js/bootstrap.min.js', array(), '4.3.1', true);
+    // Slick JS
+    wp_register_script( 'lt-slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', [ 'jquery' ], '1.8.1', true );
+    // Slides Slick Init
+    wp_register_script( 'lt-slick-init', plugins_url( 'assets/js/slick-init.js', __FILE__ ), array( 'jquery' ), \Elementor_LovePosts::VERSION, true );
 }
 
 public function widget_styles() {
     // Bootstrap CSS
-    wp_enqueue_style('lovetura-posts', plugin_dir_url(__FILE__) . 'assets/css/bootstrap.min.css', array(), '4.3.1' );
+    wp_register_style( 'lt-posts', plugin_dir_url( __FILE__ ) . 'assets/css/bootstrap.min.css', array(), '4.3.1' );
     // Lovetura Posts Custom Styles
-    wp_enqueue_style('lovetura-posts-custom', plugin_dir_url(__FILE__) . 'assets/css/posts.css', array(), \Elementor_LovePosts::VERSION );
+    wp_register_style( 'lt-posts-custom', plugin_dir_url( __FILE__ ) . 'assets/css/posts.css', array(), \Elementor_LovePosts::VERSION );
+    // Slick CSS
+    wp_register_style( 'lt-slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css', array(), '1.8.1' );
+    // Slick Theme
+    wp_register_style( 'lt-slick-theme', plugin_dir_url( __FILE__ ) . 'assets/css/slick-theme.css', array('lt-slick'), '1.8.1' );
+    // Slick Custom
+    wp_register_style( 'lt-slides', plugin_dir_url( __FILE__ ) . 'assets/css/lt-slides.css', array(), \Elementor_LovePosts::VERSION );
 }
 
 /**
@@ -85,6 +93,7 @@ public function widget_styles() {
  */
 private function include_widgets_files() {
     require_once( __DIR__ . '/widgets/lovetura-posts.php' );
+    require_once( __DIR__ . '/widgets/lovetura-slides.php' );
 }
 
 /**
@@ -101,6 +110,7 @@ public function register_widgets() {
 
     // Register Widgets
     \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\LovePosts() );
+    \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\LoveSlides() );
 }
 
 /**
@@ -117,12 +127,10 @@ public function __construct() {
     add_action( 'elementor/elements/categories_registered', [ $this, 'add_elementor_widget_categories' ] );
 
     // Register widget scripts
-    add_action( 'elementor/frontend/before_enqueue_scripts', [ $this, 'widget_scripts' ] );
-    add_action( 'elementor/editor/before_enqueue_scripts', [ $this, 'widget_scripts' ] );
-
+    add_action( 'elementor/frontend/after_register_scripts', [ $this, 'widget_scripts' ] );
+    
     // Register Widget Styles
-    add_action( 'elementor/frontend/before_enqueue_styles', [ $this, 'widget_styles' ] );
-	add_action( 'elementor/editor/before_enqueue_styles', [ $this, 'widget_styles' ] );
+    add_action( 'elementor/frontend/after_register_styles', [ $this, 'widget_styles' ] );
 
     // Register widgets
     add_action( 'elementor/widgets/widgets_registered', [ $this, 'register_widgets' ] );
