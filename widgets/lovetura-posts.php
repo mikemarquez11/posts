@@ -63,7 +63,13 @@ class LovePosts extends Widget_Base {
         return [ 'lovetura' ];
     }
 
-        /**
+    public function get_style_depends() {
+        $styles = [ 'lt-posts', 'lt-posts-custom' ];
+     
+        return $styles;
+    }
+
+    /**
      * Register the widget controls.
      * 
      * Adds different input fields to allow the user to change and customize the widget settings.
