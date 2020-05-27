@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: Lovetura Elementor Posts Widget
+ * Plugin Name: Lovetura Elementor Custom Widgets
  * Description: A widget to show Posts
  * Plugin URI: https://lovetura.com
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Lovetura
  * Author URI: https://lovetura.com
  * Text Domain: elementor-love-posts
