@@ -134,7 +134,8 @@ class LovePosts extends Widget_Base {
         $args = array(
             'post_type' => 'post',
             'post_status' => 'publish',
-            'posts_per_page' => 3
+            'post__in' => array( '116829', '116816', '116822' ),
+            //'posts_per_page' => 3
         ); ?>
         
         <div class="container">
