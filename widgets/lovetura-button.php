@@ -124,6 +124,34 @@ class LoveButton extends Widget_Base {
             ]
           );
 
+          $this->add_responsive_control(
+			'align',
+			[
+				'label' => __( 'Alignment', 'elementor' ),
+				'type' => Controls_Manager::CHOOSE,
+				'options' => [
+					'left'    => [
+						'title' => __( 'Left', 'elementor' ),
+						'icon' => 'eicon-text-align-left',
+					],
+					'center' => [
+						'title' => __( 'Center', 'elementor' ),
+						'icon' => 'eicon-text-align-center',
+					],
+					'right' => [
+						'title' => __( 'Right', 'elementor' ),
+						'icon' => 'eicon-text-align-right',
+					],
+					'justify' => [
+						'title' => __( 'Justified', 'elementor' ),
+						'icon' => 'eicon-text-align-justify',
+					],
+				],
+				'prefix_class' => 'elementor%s-align-',
+				'default' => '',
+			]
+        );
+
           $this->add_control(
 			'size',
 			[
@@ -328,10 +356,10 @@ class LoveButton extends Widget_Base {
  
     $this->add_inline_editing_attributes( 'title', 'none' ); ?>
 
-    <data id="mj-w-res-data" data-token="582b1969670786d7e11c02933031f93f" class="mj-w-data" data-apikey="5cnQ" data-w-id="DB6" data-lang="es_ES" data-base="https://app.mailjet.com" data-width="640" data-height="663.469" data-statics="statics"></data>
+    <data id="mj-w-res-data" data-token="98addd1a990a4e12637bbb22192e970a" class="mj-w-data" data-apikey="5cnQ" data-w-id="DBj" data-lang="es_ES" data-base="https://app.mailjet.com" data-width="640" data-height="456" data-statics="statics"></data>
 
     <div <?php echo $this->get_render_attribute_string( 'wrapper' ); ?>>
-    <a <?php echo $this->get_render_attribute_string( 'button' ); ?> href="#" data-token="582b1969670786d7e11c02933031f93f" onclick="mjOpenPopin(event, this)"><?php echo $settings['title']; ?></a>
+    <a <?php echo $this->get_render_attribute_string( 'button' ); ?> href="#" data-token="98addd1a990a4e12637bbb22192e970a" onclick="mjOpenPopin(event, this)"><?php echo $settings['title']; ?></a>
     </div>
  
     <?php
@@ -353,7 +381,7 @@ class LoveButton extends Widget_Base {
     #>
     
     <div class="elementor-button-wrapper">
-        <a class="elementor-button elementor-size-{{ settings.size }}" {{{ view.getRenderAttributeString( 'title', 'button' ) }}} href="#" data-token="582b1969670786d7e11c02933031f93f" onclick="mjOpenPopin(event, this)">{{{ settings.title }}}</a>
+        <a class="elementor-button elementor-size-{{ settings.size }}" {{{ view.getRenderAttributeString( 'title', 'button' ) }}} href="#" data-token="98addd1a990a4e12637bbb22192e970a" onclick="mjOpenPopin(event, this)">{{{ settings.title }}}</a>
     </div>
     <?php
   }
