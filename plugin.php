@@ -68,6 +68,8 @@ public function widget_scripts() {
     wp_register_script( 'lt-slick', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', [ 'jquery' ], '1.8.1', true );
     // Slides Slick Init
     wp_register_script( 'lt-slick-init', plugins_url( 'assets/js/slick-init.js', __FILE__ ), array( 'jquery' ), \Elementor_LovePosts::VERSION, true );
+    // Mailjet Popin Form
+    wp_register_script( 'lt-mj', 'https://app.mailjet.com/statics/js/widget.modal.js', array(), \Elementor_LovePosts::VERSION, true );
 }
 
 public function widget_styles() {
@@ -94,6 +96,7 @@ public function widget_styles() {
 private function include_widgets_files() {
     require_once( __DIR__ . '/widgets/lovetura-posts.php' );
     require_once( __DIR__ . '/widgets/lovetura-slides.php' );
+    require_once( __DIR__ . '/widgets/lovetura-button.php' );
 }
 
 /**
@@ -111,6 +114,7 @@ public function register_widgets() {
     // Register Widgets
     \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\LovePosts() );
     \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\LoveSlides() );
+    \Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\LoveButton() );
 }
 
 /**
