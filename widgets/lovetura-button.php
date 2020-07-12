@@ -356,10 +356,10 @@ class LoveButton extends Widget_Base {
  
     $this->add_inline_editing_attributes( 'title', 'none' ); ?>
 
-    <data id="mj-w-res-data" data-token="7b586f40915759044c15f394d85ca9c7" class="mj-w-data" data-apikey="5cnQ" data-w-id="DC8" data-lang="es_ES" data-base="https://app.mailjet.com" data-width="640" data-height="454.6" data-statics="statics"></data>
+    <data id="mj-w-res-data" data-token="fdad5ab47ce71cc6c0bfa6e83be9aea9" class="mj-w-data" data-apikey="5cnQ" data-w-id="DC8" data-lang="es_ES" data-base="https://app.mailjet.com" data-width="640" data-height="454.6" data-statics="statics"></data>
 
     <div <?php echo $this->get_render_attribute_string( 'wrapper' ); ?>>
-    <a <?php echo $this->get_render_attribute_string( 'button' ); ?> href="#" data-token="7b586f40915759044c15f394d85ca9c7" onclick="mjOpenPopin(event, this)"><?php echo $settings['title']; ?></a>
+    <a <?php echo $this->get_render_attribute_string( 'button' ); ?> href="#" data-token="fdad5ab47ce71cc6c0bfa6e83be9aea9" onclick="mjOpenPopin(event, this)"><?php echo $settings['title']; ?></a>
     </div>
  
     <?php
@@ -381,7 +381,7 @@ class LoveButton extends Widget_Base {
     #>
     
     <div class="elementor-button-wrapper">
-        <a class="elementor-button elementor-size-{{ settings.size }}" {{{ view.getRenderAttributeString( 'title', 'button' ) }}} href="#" data-token="7b586f40915759044c15f394d85ca9c7" onclick="mjOpenPopin(event, this)">{{{ settings.title }}}</a>
+        <a class="elementor-button elementor-size-{{ settings.size }}" {{{ view.getRenderAttributeString( 'title', 'button' ) }}} href="#" data-token="fdad5ab47ce71cc6c0bfa6e83be9aea9" onclick="mjOpenPopin(event, this)">{{{ settings.title }}}</a>
     </div>
     <?php
   }
