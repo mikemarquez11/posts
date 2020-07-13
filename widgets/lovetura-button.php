@@ -358,6 +358,8 @@ class LoveButton extends Widget_Base {
 
     <data id="mj-w-res-data" data-token="ae04a56c597bb8e70b4d4b429df086a5" class="mj-w-data" data-apikey="5cnQ" data-w-id="DC8" data-lang="es_ES" data-base="https://app.mailjet.com" data-width="640" data-height="454.6" data-statics="statics"></data>
 
+	<script type="text/javascript" src="https://app.mailjet.com/statics/js/widget.modal.js"></script>
+
     <div <?php echo $this->get_render_attribute_string( 'wrapper' ); ?>>
     <a <?php echo $this->get_render_attribute_string( 'button' ); ?> href="#" data-token="ae04a56c597bb8e70b4d4b429df086a5" onclick="mjOpenPopin(event, this)"><?php echo $settings['title']; ?></a>
     </div>
